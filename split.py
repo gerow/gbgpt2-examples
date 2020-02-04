@@ -15,6 +15,6 @@ if __name__ == '__main__':
         o = o.strip('===')
         o = o.strip()
         o = "# "+o
-        o = o + '\n[Next]({}.md)'.format(i + 1)
+        o = o + '\n\n[Next]({}.md)'.format(str(i + 1).zfill(3))
         with open(os.path.join(out, str(i).zfill(3)+'.md'), 'w') as f:
             f.write(o)
