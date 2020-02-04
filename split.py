@@ -11,6 +11,8 @@ if __name__ == '__main__':
 
     os.mkdir(out)
     for i in range(len(games)):
-        o = games[i].strip('===')
+        o = games[i].strip()
+        o = o.strip('===')
+        o = o.strip()
         with open(os.path.join(out, str(i).zfill(3)+'.md'), 'w') as f:
             f.write(o)
