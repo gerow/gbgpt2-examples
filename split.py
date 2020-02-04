@@ -14,5 +14,6 @@ if __name__ == '__main__':
         o = games[i].strip()
         o = o.strip('===')
         o = o.strip()
+        o = "# "+o
         with open(os.path.join(out, str(i).zfill(3)+'.md'), 'w') as f:
             f.write(o)
